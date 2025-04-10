@@ -6,7 +6,7 @@ const alertValidaciones = document.getElementById('alertValidaciones');
 const tablaListaCompras=document.getElementById("tablaListaCompras");
 const cuerpoTabla=tablaListaCompras.getElementsByTagName("tbody").item(0);
 
-const contadorProductos = document.getElementById("ontadorProductos");
+const contadorProductos = document.getElementById("contadorProductos");
 const productosTotal= document.getElementById("productosTotal");
 const precioTotal=document.getElementById("precioTotal");
 
@@ -42,6 +42,7 @@ function getPrecio(){
 
     btnAgregar.addEventListener('click', function(event){
         event.preventDefault();
+        console.log('Evento de click activado');
 //Bandera, al ser true permite agregar los datos a la tabla
         let isValid =true;
 
@@ -81,7 +82,7 @@ function getPrecio(){
         cuerpoTabla.insertAdjacentHTML("beforeend", row);
         costoTotal += precio * Number (txtNumber.value);
         precioTotal.innerText = "$" + costoTotal.toFixed(2);
-        tootalEnProductos += Number (txtNumber.value);
+        totalEnProductos += Number (txtNumber.value);
         productosTotal.innerHTML= totalEnProductos;
 
         contadorProductos.innerText = cont;
