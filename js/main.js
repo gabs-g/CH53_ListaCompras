@@ -9,7 +9,7 @@ const cuerpoTabla=tablaListaCompras.getElementsByTagName("tbody").item(0);
 const contadorProductos = document.getElementById("contadorProductos");
 const productosTotal= document.getElementById("productosTotal");
 const precioTotal=document.getElementById("precioTotal");
-const btnLimpiarTodo=document.getElementById("btnClear")
+const btnClear=document.getElementById("btnClear")
 
 //Numeración de la primera columna de la tabla
 let cont = 0;
@@ -152,7 +152,7 @@ window.addEventListener("load", function(event){
 //Campos
 //localStorage
 
-btnLimpiarTodo.addEventListener("click", function(event){
+btnClear.addEventListener("click", function(event){
     event.preventDefault();
 
     txtName.value="";
